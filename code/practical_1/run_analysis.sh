@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=test_job
+#SBATCH --job-name=practical_1
 #SBATCH --partition=teach_cpu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=0:10:00
 #SBATCH --mem=100M
-#SBATCH --account=SSCM033324
+#SBATCH --account=SSCM037184
 #SBATCH --output ./slurm_logs/%j.out
 
 
@@ -18,7 +18,7 @@ source ~/initConda.sh
 
 mamba activate ahds_week9
 
-mkdir -p ./slurm_logs/
+mkdir ./slurm_logs/
 mkdir -p ../../results
 mkdir -p ../../data/derived/intermediate
 
@@ -38,3 +38,4 @@ echo 'Starting analysis'
 
 }< ../data/derived/top_conditions.csv
 
+echo 'Analysis complete'

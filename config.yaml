@@ -1,6 +1,6 @@
 default-resources:
-  - slurm_partition=
-  - slurm_account=
+  - slurm_partition=teach_cpu
+  - slurm_account=sscm037184
   - mem_mb=
   - runtime=
   - ntasks=

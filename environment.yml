@@ -9,4 +9,4 @@ dependencies:
   - r-tidytext=0.4.2  
   - r-wordcloud=2.6
   - snakemake=8.24.1
-prefix: /opt/anaconda3/envs/ahds_week9
+  - snakemake-executor-plugin-slurm=0.11.1
