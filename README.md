@@ -2,7 +2,7 @@
 
 -------------------------------
 
-## Practical instructions
+## Overview
 
 The pipeline in this repository analyses data collected from online reviews of prescribed medications.
 
@@ -11,28 +11,51 @@ Specifically, it:
 2. Finds words and bigrams used when describing the side effects of medications prescribed for each condition
 3. Plots wordclouds to visualise the most common words and bigrams used to describe the side effects associated with these medications
 
+## Homework (week 8)
+
+Before week 9, you need to:
+
+1. Create an ssh-key for logging into BluePebble and GitHub
+2. Add the ssk-key to the ssh-agent on your computer
+3. Upload your public ssh-key to GitHub
+4. Edit your ~/.ssh/config file on your computer so that you use SSH to login to BluePebble
+5. Clone this repository to your `$WORK` partition on BluePebble using git
+6. Run the `installConda.sh` script in the `code/setup/` directory to install conda on BluePebble
+
+Instructions to do these steps can be found in the homework from week 8. There will also be a drop-in session before week 9 teaching (9:30am - 10am) where we will help you complete this setup.
+
+
+
 ## Practical 1: Conda on HPC
 
-### Setting up Git and Conda
+### Create directories 
 
-#### Git
-1. Log into bc4
-2. Add git module
-3. Setup ssh access for git
-4. Fork this repository
-5. Clone forked repository to home partition
-   
-#### Conda / Mamba
-1. Follow ACRC's instructions to install mamba on your work partition
-2. Navigate to cloned repository and create a conda environment from environment.yml
-3. Activate the conda environment
+The repository contains a `code` directory. You will also need a directory for your data and results. On BluePebble, navigate to the cloned repository and create two directories:
+
+- `data`
+- `results`
+
+Inside the `data` directory, you will need to create a sub-directory named `original`.
+
+### Moving data to BluePebble
+
+You can download the data needed to run the pipeline from blackboard. Once you have downloaded it to your local computer, you need to move it to BluePebble. You can do this using `scp` from your local terminal:
+
+`scp drugLibTrain_raw.tsv USERNAME@bp1-login.acrc.bris.ac.uk:`
+
+This will copy the data to your `$HOME` partition on BluePebble. On BluePebble, you will need to move it to the `data/original/` directory that you created.
+
+### Creating your conda environment
+
+1. On BluePebble, navigate to this repository and create a conda environment from environment.yml (`conda env create -f environment.yml`)
+2. Activate the conda environment (`conda activate ahds_week9`)
 
 ### Run analysis using a conda environment
 
-Look at `practical_1/run_analysis.sh`: this is a sumbission script to run the pipeline on BlueCrystal. It does not make use of Snakemake.
+Look at `practical_1/run_analysis.sh`: this is a sumbission script to run the pipeline on BluePebble. It does not make use of Snakemake.
 
 1. Add comments to the submission script, describing what each step does
-2. Submit the submission script to the jobque
+2. Submit the submission script to the jobque (`qsub run_analysis.sh`)
 3. Add, commit and push the results to git so that you can view the figures locally
 4. **extension** Edit the submission script to run as an array job
 
@@ -55,10 +78,9 @@ Look at `practical_2/Snakefile`: this is a snakemake workflow for the analysis.
 
 ### Run your workflow using a slurm profile
 
-1. Install the [snakemake executor plugin for slurm](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
-2. Create a slurm profile and save this in your config directory: `~./config/snakemake/slurm_profile/config.yaml`
-3. Clean your snakemake workflow (`snakemake clean`)
-4. Run your workflow using your profile, timing it: `time snakemake --executor slurm --profile slurm_profile` 
+1. Create a Snakemake slurm profile and save this in your config directory: `~./config/snakemake/slurm_profile/config.yaml`. You can find a template in the root directory of the repository.
+2. Clean your Snakemake workflow (`snakemake clean`)
+3. Run your workflow using your profile, timing it: `time snakemake --executor slurm --profile slurm_profile` 
 
 ## Things to consider
 
