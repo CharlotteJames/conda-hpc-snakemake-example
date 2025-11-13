@@ -70,7 +70,7 @@ You will now re-run the analysis using Snakemake. First, navigate to the root di
 ### Adapt the bash pipeline to work with snakemake
 
 Look at `code/Snakefile`: this is a snakemake workflow for the analysis.
-1. Compare this to the commands in `run_analysis.sh`. What commands aren't executed by the Snakefile?
+1. Compare this to the commands in `code/practical_1/run_analysis.sh`. What commands aren't executed by the Snakefile?
 2. Execute snakemake with a dry run (`snakemake -n`) -- what error(s) do you see?
 3. Look at `make_config.sh`: which parts of the pipeline are missing? Complete and execute.
 4. Run snakemake with a dry run again -- the errors should have gone. 
