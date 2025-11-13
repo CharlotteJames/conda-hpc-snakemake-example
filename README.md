@@ -22,7 +22,7 @@ Before week 9, you need to:
 5. Fork this repository, and clone the fork to your `$WORK` partition on BluePebble using git
 6. Run the `installConda.sh` script in the `/code/setup/` directory to install conda on BluePebble
 
-Instructions to do these steps can be found in the (homework from week 8)[week_8_homework.md]. There will also be a drop-in session before week 9 teaching (9:30am - 10am) where we will help you complete this setup.
+Instructions to do these steps can be found in the [homework from week 8](https://github.com/MRCIEU/conda-hpc-snakemake-example/blob/main/week_8_homework.md). There will also be a drop-in session before week 9 teaching (9:30am - 10am) where we will help you complete this setup.
 
 
 
