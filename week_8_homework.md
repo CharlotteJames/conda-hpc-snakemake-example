@@ -77,7 +77,12 @@ Host bp1
 
 Make sure you have saved the changes, and try logging into BluePebble (run `ssh bp1` from your terminal). You should still be asked for a password. This is because you need to put your public key on BluePebble. 
 
-Login to BluePebble with your password, and create a file called `authorized_keys` in the `.ssh` directory by entering `code ~/.ssh/authorized_keys` in the BluePebble VSCode terminal. Copy your public key to this file and save it, then disconnect from BluePebble.
+Login to BluePebble with your password, and create a file called `authorized_keys` in the `.ssh` directory by entering 
+
+```
+code ~/.ssh/authorized_keys
+```
+in the BluePebble VSCode terminal. Copy your public key to this file and save it, then disconnect from BluePebble.
 
 Try reconnecting to BluePebble. You shouldn't need a password. 
 
