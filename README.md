@@ -15,9 +15,9 @@ Specifically, it:
 
 Before week 9, you need to:
 
-1. Create an ssh-key for logging into BluePebble and GitHub
-2. Add the ssk-key to the ssh-agent on your computer
-3. Upload your public ssh-key to GitHub
+1. Create an SSH key for logging into BluePebble and GitHub
+2. Add the SSH key to the SSH agent on your computer
+3. Upload your public SSH key to GitHub
 4. Edit the `~/.ssh/config` file on your computer so that you use SSH to login to BluePebble
 5. Fork this repository, and clone the fork to your `$WORK` partition on BluePebble using git
 6. Run the `installConda.sh` script in the `/code/setup/` directory to install conda on BluePebble
