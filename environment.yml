@@ -1,4 +1,4 @@
-name: ahds_week9
+name: ahds_week9_fix
 channels:
   - bioconda
   - conda-forge
@@ -8,5 +8,4 @@ dependencies:
   - r-tidyverse=2.0.0
   - r-tidytext=0.4.2  
   - r-wordcloud=2.6
-  - snakemake=8.24.1
-  - snakemake-executor-plugin-slurm=0.11.1
+  - snakemake=7.26
