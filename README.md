@@ -78,9 +78,9 @@ Look at `code/Snakefile`: this is a snakemake workflow for the analysis.
 
 ### Run your workflow using a slurm profile
 
-1. Create a Snakemake slurm profile and save this in your config directory: `~./config/snakemake/slurm_profile/config.yaml`. You can find a template in the root directory of the repository.
+1. Create a Snakemake slurm profile and save this in your code directory. You can find a template in the root directory of the repository (`config.yaml`).
 2. Clean your Snakemake workflow (`snakemake clean`)
-3. Run your workflow using your profile, timing it: `time snakemake --executor slurm --profile slurm_profile` 
+3. Run your workflow using your profile, timing it: `time snakemake --profile .` 
 
 ## Things to consider
 
