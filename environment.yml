@@ -1,4 +1,4 @@
-name: ahds_week9_fix
+name: ahds_week9
 channels:
   - bioconda
   - conda-forge
