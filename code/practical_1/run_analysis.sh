@@ -16,7 +16,7 @@ echo 'Setting up environment'
 
 source ~/initConda.sh
 
-mamba activate ahds_week9
+conda activate ahds_week9
 
 mkdir ./slurm_logs/
 mkdir -p ../../results
